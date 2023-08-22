@@ -22,7 +22,7 @@ XMLit is a Python script that processes HTTP request files, converts the request
 Run the script with the following command:
 
 ```bash
-python xml_injection_tool.py -r request.req -x simple-xxe -t tag_name -v variable_value -w output_request.req
+python xml_injection_tool.py -r change_email.req -x simple-xxe -t tag_name -v variable_value -w output_change_email.req
 ```
 
 Replace the arguments with appropriate values:
@@ -40,17 +40,17 @@ Replace the arguments with appropriate values:
 Convert request body to XML format:
 
 ```bash
-python xml_injection_tool.py -r request.req
+python xml_injection_tool.py -r change_email.req
 ```
 
 Perform a simple XXE attack with a custom tag name and variable:
 ```bash
-python xml_injection_tool.py -r request.req -x simple-xxe -t custom_tag -v "&xxe_var;"
+python xml_injection_tool.py -r change_email.req -x simple-xxe -t custom_tag -v "xxe_var"
 ```
 
 Save the modified request to an output file:
 ```bash
-python xml_injection_tool.py -r request.req -x simple-xxe -t custom_tag -v "&xxe_var;" -w modified_request.req 
+python xml_injection_tool.py -r change_email.req -x simple-xxe -t custom_tag -v "xxe_var" -w modified_change_email.req 
 ```
 
 ## License
