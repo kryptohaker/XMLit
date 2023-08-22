@@ -45,12 +45,12 @@ python xml_injection_tool.py -r change_email.req
 
 Perform a simple XXE attack with a custom tag name and variable:
 ```bash
-python xml_injection_tool.py -r change_email.req -x simple-xxe -t custom_tag -v "xxe_var"
+python xml_injection_tool.py -r change_email.req -x simple-xxe -t email -v "xxe_var"
 ```
 
 Save the modified request to an output file:
 ```bash
-python xml_injection_tool.py -r change_email.req -x simple-xxe -t custom_tag -v "xxe_var" -w modified_change_email.req 
+python xml_injection_tool.py -r change_email.req -x simple-xxe -t email -v "xxe_var" -w modified_change_email.req 
 ```
 
 ## License
