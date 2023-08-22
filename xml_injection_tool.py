@@ -44,7 +44,7 @@ def convert_to_xml_tags(data, attack_type, tag_name, variable):
 def main():
     parser = argparse.ArgumentParser(description='Process request file and convert to XML.')
     parser.add_argument('-r', '--request', required=True, help='Input request file')
-    parser.add_argument('-x', '--attack_type', help='Attack type: {simple-xxe|read-file}')
+    parser.add_argument('-x', '--attack_type', help='Attack type: e.g., simple-xxe')
     parser.add_argument('-t', '--tag_name', help='XML tag name')
     parser.add_argument('-v', '--variable', help='Variable for tag')
     parser.add_argument('-w', '--output_file', help='Output file to save modified request')
