@@ -1,0 +1,24 @@
+POST /my-account/change-email HTTP/2
+Host: example.com
+Cookie: session=fakeSession12345
+Content-Length: 31
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Firefox";v="78", "Gecko";v="78", "Not:A-Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Windows"
+Upgrade-Insecure-Requests: 1
+Origin: https://example.com
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: https://example.com/my-account
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9
+Dnt: 1
+Sec-Gpc: 1
+
+email=wiener1%40normal-user.net&rand=987265344&tenant=1&fakevar=123&mod=update
