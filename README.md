@@ -27,12 +27,13 @@ python xml_injection_tool.py -r request.req -x simple-xxe -t tag_name -v variabl
 
 Replace the arguments with appropriate values:
 
--r or --request: Input request file.
--x or --attack_type: Attack type (simple-xxe for XXE injection).
--t or --tag_name: XML tag name for injection.
--v or --variable: Variable to be injected.
--w or --output_file: Output file to save the modified request.
-> Note: The -x, -t, and -v arguments are required for the simple-xxe attack type.
+`-r` or `--request`: Input request file.<br/>
+`-x` or `--attack_type`: Attack type (simple-xxe for XXE injection).<br/>
+`-t` or `--tag_name`: XML tag name for injection.<br/>
+`-v` or `--variable`: Variable to be injected.<br/>
+`-w` or `--output_file`: Output file to save the modified request.<br/>
+
+> Note: The `-x`, `-t`, and `-v` arguments are required for the simple-xxe attack type.
 
 ### Examples
 
